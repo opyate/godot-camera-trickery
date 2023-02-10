@@ -5,7 +5,7 @@ extends Camera2D
 onready var zoom_debug = $CanvasLayer/Label
 
 # Lower cap for the `_zoom_level`.
-export var min_zoom := 1.0
+export var min_zoom := 0.5
 # Upper cap for the `_zoom_level`.
 export var max_zoom := 4.0
 # Controls how much we increase or decrease the `_zoom_level` on every turn of the scroll wheel.
@@ -26,7 +26,7 @@ var previous_offset
 var previous_position
 var camera_drag_enabled := true
 
-var use_offset_based_panning = true
+var use_offset_based_panning = false
 
 
 func _ready():
