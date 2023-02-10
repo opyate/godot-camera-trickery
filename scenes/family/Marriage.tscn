@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/family/Marriage.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.980392, 1, 0, 0.282353 )
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[node name="Marriage" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_right = 68.0
+margin_bottom = 64.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
+margin_right = 68.0
+margin_bottom = 64.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/CenterContainer"]
+margin_left = 2.0
+margin_right = 66.0
+margin_bottom = 64.0
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+
+[node name="PersonContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/MarginContainer"]
+unique_name_in_owner = true
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 32.0
+margin_bottom = 32.0
+custom_constants/separation = 32
